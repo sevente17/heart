@@ -1,0 +1,21 @@
+name: HeartPlugin
+version: 1.0.0
+main: com.heartplugin.HeartPlugin
+api-version: '26.2'
+description: 使用 /heart 扣一颗心获取“心”苹果，吃下苹果可获得一颗心
+author: HeartPlugin
+
+commands:
+  heart:
+    description: 扣一颗心获得“心”苹果；get/give 同上；管理员可用 opgive 无条件获得
+    usage: /heart [get|give|opgive|reload]
+    permission: heartplugin.heart
+    permission-message: 你没有权限使用该命令
+
+permissions:
+  heartplugin.heart:
+    description: 允许使用 /heart 命令
+    default: true
+  heartplugin.admin:
+    description: 允许使用 /heart reload 重新加载配置
+    default: op
